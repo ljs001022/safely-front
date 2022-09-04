@@ -1,8 +1,16 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+// _app.tsx
+import type { AppProps } from "next/app";
+import CssBaseline from "@mui/material/CssBaseline";
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
-}
+const App = (props: AppProps) => {
+  const { Component, pageProps } = props;
 
-export default MyApp
+  return (
+    <>
+      <CssBaseline />
+      <Component {...pageProps} />
+    </>
+  );
+};
+
+export default App;
